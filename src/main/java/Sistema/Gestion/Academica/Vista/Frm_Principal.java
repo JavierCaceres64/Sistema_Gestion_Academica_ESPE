@@ -1,4 +1,7 @@
 package Sistema.Gestion.Academica.Vista;
+
+import javax.swing.JOptionPane;
+
 /**
  * @author Javier
  */
@@ -6,15 +9,29 @@ public class Frm_Principal extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Frm_Principal.class.getName());
 
+        private Pnl_Estudiante panelEstudiante;
+        private Pnl_Docente panelDocente;
+        private Pnl_Asignatura panelAsignatura;
+        private Pnl_Matricula panelMatricula;
+        private Pnl_Reporte panelReporte;
+
+    
     public Frm_Principal() {
         initComponents();
         setLocationRelativeTo(null);
         setTitle("Sistema de Gestión Académica - ESPE");
         
-        tabPrincipal.addTab("Estudiantes", new Pnl_Estudiante());
-        tabPrincipal.addTab("Docentes", new Pnl_Docente());
-        tabPrincipal.addTab("Asignaturas", new Pnl_Asignatura());
-        tabPrincipal.addTab("Matrículas", new Pnl_Matricula());
+        panelEstudiante = new Pnl_Estudiante();
+        panelDocente = new Pnl_Docente();
+        panelAsignatura = new Pnl_Asignatura();
+        panelMatricula = new Pnl_Matricula();
+        panelReporte = new Pnl_Reporte();
+
+        tabPrincipal.addTab("Estudiantes", panelEstudiante);
+        tabPrincipal.addTab("Docentes", panelDocente);
+        tabPrincipal.addTab("Asignaturas", panelAsignatura);
+        tabPrincipal.addTab("Matrículas", panelMatricula);
+        tabPrincipal.addTab("Reportes", panelReporte);
     }
 
     /**
@@ -26,27 +43,136 @@ public class Frm_Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jProgressBar1 = new javax.swing.JProgressBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu4 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuBar3 = new javax.swing.JMenuBar();
+        jMenu6 = new javax.swing.JMenu();
+        jMenu7 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuBar4 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu8 = new javax.swing.JMenu();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuBar5 = new javax.swing.JMenuBar();
+        jMenu9 = new javax.swing.JMenu();
+        jMenu10 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenu11 = new javax.swing.JMenu();
+        jMenuBar6 = new javax.swing.JMenuBar();
+        jMenu12 = new javax.swing.JMenu();
+        jMenu13 = new javax.swing.JMenu();
         tabPrincipal = new javax.swing.JTabbedPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        archivo = new javax.swing.JMenu();
+        mnuSalir = new javax.swing.JMenuItem();
+        mnuAyuda = new javax.swing.JMenu();
+        mnuAcercaDe = new javax.swing.JMenuItem();
+
+        jMenu1.setText("jMenu1");
+
+        jMenuItem1.setText("jMenuItem1");
+
+        jMenu4.setText("File");
+        jMenuBar2.add(jMenu4);
+
+        jMenu5.setText("Edit");
+        jMenuBar2.add(jMenu5);
+
+        jMenu6.setText("File");
+        jMenuBar3.add(jMenu6);
+
+        jMenu7.setText("Edit");
+        jMenuBar3.add(jMenu7);
+
+        jMenuItem3.setText("jMenuItem3");
+
+        jMenuItem2.setText("jMenuItem2");
+
+        jMenu2.setText("File");
+        jMenuBar4.add(jMenu2);
+
+        jMenu8.setText("Edit");
+        jMenuBar4.add(jMenu8);
+
+        jMenuItem8.setText("jMenuItem8");
+
+        jMenu9.setText("File");
+        jMenuBar5.add(jMenu9);
+
+        jMenu10.setText("Edit");
+        jMenuBar5.add(jMenu10);
+
+        jMenuItem4.setText("jMenuItem4");
+
+        jMenuItem5.setText("jMenuItem5");
+
+        jMenu11.setText("jMenu11");
+
+        jMenu12.setText("File");
+        jMenuBar6.add(jMenu12);
+
+        jMenu13.setText("Edit");
+        jMenuBar6.add(jMenu13);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        archivo.setText("Archivo");
+
+        mnuSalir.setText("Salir");
+        mnuSalir.addActionListener(this::mnuSalirActionPerformed);
+        archivo.add(mnuSalir);
+
+        jMenuBar1.add(archivo);
+
+        mnuAyuda.setText("Ayuda");
+
+        mnuAcercaDe.setText("Acerca de");
+        mnuAcercaDe.addActionListener(this::mnuAcercaDeActionPerformed);
+        mnuAyuda.add(mnuAcercaDe);
+
+        jMenuBar1.add(mnuAyuda);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(tabPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 652, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(tabPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mnuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_mnuSalirActionPerformed
+
+    private void mnuAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAcercaDeActionPerformed
+        JOptionPane.showMessageDialog(this,
+        "Sistema de Gestión Académica\n"
+        + "Universidad de las Fuerzas Armadas - ESPE\n"
+        + "Programación Orientada a Objetos\n"
+        + "Período Abril - Agosto 2026\n\n"
+        + "Desarrollado por: Javier Caceres",
+        "Acerca de", JOptionPane.INFORMATION_MESSAGE);        // TODO add your handling code here:
+    }//GEN-LAST:event_mnuAcercaDeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -74,6 +200,35 @@ public class Frm_Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu archivo;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu10;
+    private javax.swing.JMenu jMenu11;
+    private javax.swing.JMenu jMenu12;
+    private javax.swing.JMenu jMenu13;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu9;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenuBar jMenuBar3;
+    private javax.swing.JMenuBar jMenuBar4;
+    private javax.swing.JMenuBar jMenuBar5;
+    private javax.swing.JMenuBar jMenuBar6;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JMenuItem mnuAcercaDe;
+    private javax.swing.JMenu mnuAyuda;
+    private javax.swing.JMenuItem mnuSalir;
     private javax.swing.JTabbedPane tabPrincipal;
     // End of variables declaration//GEN-END:variables
 }
