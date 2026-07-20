@@ -1,13 +1,13 @@
 # Sistema de Gestión Académica - ESPE
 
 Proyecto final de Programación Orientada a Objetos.
-Universidad de las Fuerzas Armadas ESPE - Abril/Agosto 2026
+Universidad de las Fuerzas Armadas ESPE - 24 de julio del 2026
 
 ## Tecnologías
-- Java 21 / Maven
+- Java with Maven
 - Java Swing
 - MongoDB
-- iText (reportes PDF)
+- (reportes PDF)
 
 ## Arquitectura
 Patrón MVC con separación en capas: Vista → Controlador → DAO → MongoDB
