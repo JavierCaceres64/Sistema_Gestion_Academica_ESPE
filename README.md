@@ -21,4 +21,4 @@ MongoDB corriendo en localhost:27017
 
 ## Integrantes
 - Javier Cáceres
-- ...
+- Jeremy Chavez
